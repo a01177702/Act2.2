@@ -1,3 +1,7 @@
+/*
+Act2.2 Suffix exercise
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -10,7 +14,7 @@ struct Suffix {
     int index;
 };
 
-bool compararSuffix(const Suffix &a, const Suffix &b) {
+bool comparar_suffix(const Suffix &a, const Suffix &b) {
     return a.suffix < b.suffix;
 }
 
@@ -29,7 +33,7 @@ int main() {
         suffixes.push_back(s);
     }
 
-    sort(suffixes.begin(), suffixes.end(), compararSuffix);
+    sort(suffixes.begin(), suffixes.end(), comparar_suffix);
 
     for (int i = 0; i < n; i++) {
         cout << suffixes[i].index << endl;
